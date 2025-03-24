@@ -1,0 +1,59 @@
+name: 📘 과제 출제
+description: 과제를 출제할 때 사용하는 템플릿입니다.
+title: "[과제] 과제 제목"
+labels: [과제]
+assignees: []
+
+body:
+  - type: input
+    id: assignment_title
+    attributes:
+      label: 과제 제목
+      description: 과제 이름을 적어주세요.
+      placeholder: 예: 머신러닝 과제 2 - 선형 회귀 구현
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 과제 설명
+      description: 과제의 목적, 요구사항 등을 설명해 주세요.
+      placeholder: 이 과제에서는 선형 회귀 모델을 직접 구현하고, 주어진 데이터를 학습해 예측을 수행합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: instructions
+    attributes:
+      label: 제출 방법
+      description: 학생들이 댓글에 어떤 형식으로 제출해야 하는지 안내해 주세요.
+      placeholder: |
+        아래 형식으로 댓글을 작성해서 과제를 제출하세요:
+        - 이름:
+        - 학번:
+        - 제출 링크:
+        - 간단한 설명:
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: 제출 마감일
+      description: 과제 마감 날짜와 시간을 적어주세요.
+      placeholder: 예: 2025-04-05 23:59
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        📝 **댓글 예시 (학생용)**  
+        ```markdown
+        - 이름: 홍길동  
+        - 학번: 202312345  
+        - 제출 링크: https://github.com/username/assignment2  
+        - 설명: 데이터 전처리를 pandas로 했고, scikit-learn으로 모델 구현했습니다.
+        ```
+
